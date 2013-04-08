@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+ol {
+ counter-reset: item;
+}
+
+li {
+ display:block;
+}
+
+li:before {
+	display: inline-block;
+	content: counter(item) ") ";
+	counter-increment: item;
+	width: 1.5em;
+	margin-left: -2em;
+}
+
+ol li ol {
+  counter-reset: subitem;
+}
+
+ol ol li {
+ display:block;
+}
+
+ol li ol li:before {
+	display: inline-block;
+	content: counter(item) "." counter(subitem) ": ";
+	counter-increment: subitem;
+	width: 2em;
+	margin-left: -1.5em;
+}
+</style>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+
+
+<ol>
+	<li>Line number 1</li>
+	<li>Line number 2</li>
+	<li>Line number 3</li>
+	<li>Line number 4
+		<ol>
+			<li>Line number 4.1</li>
+			<li>Line number 4.2</li>
+			<li>Line number 4.3</li>
+			<li>Line number 4.4</li>
+			<li>Line number 4.5</li>
+			<li>Line number 4.6</li>
+			<li>Line number 4.7</li>
+		</ol>
+	</li>
+	<li>Line number 5</li>
+	<li>Line number 6</li>
+	<li>Line number 7</li>
+</ol>
+
+</body>
+</html> 
